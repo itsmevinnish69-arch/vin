@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+ 
+    <style>
+        .video-bg {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: -1;
+        }
+        .overlay {
+          width: 100%;
+          height: 100vh;
+          background: rgba(11, 0, 0, 0.55);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+        }
+        .logo-left {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 90px;
+        }
+ 
+        .logo-right {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 90px;
+        }
+        .wrapper {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .floating-text {
+            color: #028224;
+            font-size: 100px;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+            animation: floatText 4s ease-in-out infinite alternate;
+            white-space: nowrap;
+        }
+ 
+        @keyframes floatText {
+            0% { transform: translateY(-10px); }
+            100% { transform: translateY(10px); }
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            width: 350px;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            
+        }
+ 
+        .container h2 {
+            margin-bottom: 20px;
+            color: #003366;
+        }
+ 
+        .input {
+            margin-bottom: 18px;
+            text-align: left;
+        }
+ 
+        .input- group label {
+            font-size: 12px;
+            color: #333;
+        }
+ 
+        .input-group input {
+            width: 90%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #777;
+            margin-top: 5px;
+            font-size: 15px;
+        }
+ 
+        .login-btn {
+            width: 50%;
+            padding: 10px;
+            border: none;
+            background: #003366;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+ 
+        .login-btn:hover {
+            background: #001f4d;
+        }
+    </style>
+</head>
+<body>
+    <video class="video-bg" autoplay loop muted>
+        <source src="bg.mp4" type="video/mp4">
+    </video>
+ 
+    <div class="overlay">
+
+        <img src="ics.png" class="logo-left" style="border-radius: 50px;">
+        <img src="tcgc.jpg" class="logo-right" style="border-radius: 50px;">
+ 
+        <div class="wrapper">
+ 
+            <div class="floating-text">
+                Lux Mundi ||<br> Una ang Ginoo
+            </div>
+
+            <div class="container">
+                <h2><center>Login</center></h2>
+ 
+                <form action="1 homepage.html" method="POST">
+                    <div class="input-group">
+                        <label>Username</label>
+                        <input type="text" placeholder="Enter username" required>
+                    </div>
+ 
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="Enter password" required>
+                    </div>
+ 
+                   <nav>
+                    <center> <button class="login-btn">Login</button> </center>
+                   </nav>
+ 
+                </form>
+            </div>
+ 
+        </div>
+    </div>
+ 
+</body>
+</html>
